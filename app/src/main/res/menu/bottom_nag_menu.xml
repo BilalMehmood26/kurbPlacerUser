@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/home_icon_selection"
+        android:enabled="true"
+        android:title="Home" />
+    <item
+        android:id="@+id/timeSheetFragment"
+        android:icon="@drawable/calender_icon_selection"
+        android:enabled="true"
+        android:title="Calender" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_icon_selection"
+        android:enabled="true"
+        android:title="Profile" />
+</menu>

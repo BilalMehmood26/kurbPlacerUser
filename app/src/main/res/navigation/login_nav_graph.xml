@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph.xml"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.employee.kurbplacers.ui.auth.signin.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="com.employee.kurbplacers.ui.auth.signup.PersonalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info" >
+        <action
+            android:id="@+id/action_personalInfoFragment_to_taxationDetailsFragment"
+            app:destination="@id/taxationDetailsFragment" />
+        <action
+            android:id="@+id/action_personalInfoFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taxationDetailsFragment"
+        android:name="com.employee.kurbplacers.ui.auth.signup.TaxationDetailsFragment"
+        android:label="fragment_taxation_details"
+        tools:layout="@layout/fragment_taxation_details" >
+        <action
+            android:id="@+id/action_taxationDetailsFragment_to_bnkingDetailsFragment"
+            app:destination="@id/bnkingDetailsFragment"/>
+        <action
+            android:id="@+id/action_taxationDetailsFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bnkingDetailsFragment"
+        android:name="com.employee.kurbplacers.ui.auth.signup.BnkingDetailsFragment"
+        android:label="fragment_bnking_details"
+        tools:layout="@layout/fragment_bnking_details">
+        <action
+            android:id="@+id/action_bnkingDetailsFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+</navigation>
